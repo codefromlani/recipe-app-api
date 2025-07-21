@@ -10,7 +10,7 @@ from db.models import Favorite
 
 router = APIRouter(tags=["Favorites"])
 
-@router.post("/favorites/", response_model=FavoriteResponse, status_code=status.HTTP_201_CREATED)
+@router.post("/favorites", response_model=FavoriteResponse, status_code=status.HTTP_201_CREATED)
 async def create_favorite(favorite_data: FavoriteCreate, db: Session = Depends(get_db)):
     try:
         new_favorite = Favorite(**favorite_data.model_dump())

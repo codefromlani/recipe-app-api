@@ -11,5 +11,5 @@ class Favorite(Base):
     title = Column(String, nullable=False)
     image = Column(String)
     cook_time = Column(String)
-    servings = Column(String)
+    servings = Column(Integer)
     created_at = Column(DateTime(timezone=True), server_default=func.now())

@@ -9,7 +9,7 @@ class FavoriteCreate(BaseModel):
     title: str 
     image: Optional[str] 
     cook_time: Optional[str] 
-    servings: Optional[str] 
+    servings: Optional[int] 
 
 
 class FavoriteResponse(FavoriteCreate):
